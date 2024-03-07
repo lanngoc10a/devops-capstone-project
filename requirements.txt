@@ -19,6 +19,7 @@ black==22.3.0
 
 # Testing dependencies
 pytest==8.0.2
+cov-4.1.0
 pinocchio==0.4.3
 factory-boy==2.12.0
 
