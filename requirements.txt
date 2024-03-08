@@ -20,6 +20,7 @@ black==22.3.0
 
 # Testing dependencies
 pytest==8.0.2
+pytest-cov==4.1.0
 coverage==6.3.2  # Corrected package name
 pinocchio==0.4.3
 factory-boy==2.12.0
