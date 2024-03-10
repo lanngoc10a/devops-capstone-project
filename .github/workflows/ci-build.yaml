@@ -36,6 +36,13 @@ jobs:
           python -m pip install --upgrade pip wheel
           pip install -r requirements.txt
 
+      - name: Wait for PostgreSQL to be ready
+        run: |
+          while ! pg_isready -h localhost -p 5432 -U postgres -d testdb; do
+            echo "Waiting for PostgreSQL to be ready..."
+            sleep 2
+          done
+
       - name: Lint with flake8
         run: |
           flake8 service --count --select=E9,F63,F7,F82 --show-source --statistics
